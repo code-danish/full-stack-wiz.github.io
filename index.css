@@ -1,0 +1,148 @@
+body {
+    background: rgb(56, 88, 97);
+    background: radial-gradient(circle, rgb(34, 52, 57) 0%, rgb(0, 0, 0) 100%);
+}
+
+.text-gradient {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(#6dd9e5, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-alt {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(#ff97e7, #f88a8a, #fef484);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font-family-accent {
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.card-footer.hide {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.card-footer {
+    opacity: 1;
+    transform: translateY(0rem);
+    transition: all 0.5s;
+}
+
+.text-shadow {
+    text-shadow: 0.1rem 0.1rem 0.5rem rgb(0, 0, 0);
+}
+
+.text-shadow-light {
+    text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.card-text,
+.card-header {
+    color: rgba(199, 211, 209, 0.879);
+}
+
+#cursor {
+    width: 0.7rem;
+    height: 1.4rem;
+    border-radius: 0.07rem;
+    vertical-align: text-bottom;
+    background-color: rgb(131, 171, 185);
+    display: inline-block;
+    margin-left: -0.5rem;
+    animation: blink 0.7s infinite ease-in;
+
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.star {
+    height: 0.3rem;
+    width: 0.3rem;
+    display: inline-block;
+    background-color: rgba(83, 111, 113, 0.498);
+    border-radius: 50%;
+
+}
+
+.star:nth-child(12n+3),
+.star:nth-child(9n+3),
+.star:nth-child(10n+7) {
+    height: 1rem;
+    width: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    clip-path: polygon(50% 3%, 65% 32%, 100% 44%, 66% 67%, 52% 100%, 33% 66%, 0 49%, 34% 34%);
+    animation-delay: 250ms;
+    animation: stars 2s alternate-reverse infinite ease-in-out;
+
+}
+
+.star:nth-child(10n+7) {
+    height: 0.6rem;
+    width: 0.6rem;
+    animation-delay: 350ms;
+    background-color: rgba(255, 255, 255, 0.45);
+    animation-duration: 3s;
+}
+
+.star.star:nth-child(9n+3) {
+    height: 0.4rem;
+    width: 0.4rem;
+    animation-delay: 500ms;
+    animation-duration: 1s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes stars {
+    from {
+        opacity: 0;
+        scale: 0.4;
+        rotate: 150deg;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        rotate: 0deg;
+    }
+}
+
+#falling-stars {
+    width: calc(100vh + 100vw) !important;
+    height: 10vh;
+    position: relative;
+    top: 50%;
+}
+
+.falling-star {
+    background: transparent;
+    background: linear-gradient(90deg, rgba(170, 189, 192, 0.466) 0%, rgba(255,255,255,0) 100%);
+    height: 5rem;
+    width: 1rem;
+    display: inline-block;
+    animation: shootStar 8s infinite;
+    position: relative;
+    clip-path: polygon(50% 0%, 60% 85%, 50% 100%, 40% 85%);
+}
+
+@keyframes shootStar {
+    from {
+        translate: 0 0vh;
+    }
+
+    to {
+        translate: 0 200vh;
+    }
+
+}
